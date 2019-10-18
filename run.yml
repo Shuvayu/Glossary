@@ -1,0 +1,10 @@
+version: "3.5"
+services:
+  project:
+    build:
+      context: ./Glossary
+      dockerfile: run.Dockerfile
+    ports:
+      - 5000:80
+    volumes:
+      - ./Glossary/src/GlossaryApi:/app
